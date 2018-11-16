@@ -36,6 +36,8 @@ function solution(){
         findNext();
     }
 
+    let arr = Array.from({length: 10}, () => 0);
+
     return p;
     
 }

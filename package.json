@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bignumber.js": "^8.0.1"
+    "bignumber.js": "^8.0.1",
+    "decimal.js": "^10.0.1"
   },
   "devDependencies": {
     "ts-node": "^7.0.1"
