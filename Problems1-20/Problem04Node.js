@@ -52,8 +52,14 @@ function solution(n, b){
   console.log(`Answer: ${g} Execution Time: ${tot[0]}s, ${tot[1]/1000000}ms`);
 
   /**
-   *    SUBMITTED ON 2018/11/13
-   *    CORRECT
-   *    VALUE: 906609
-   *    RUNTIME: 52.2390654ms
+   *    SUBMITTED ON        2018/11/13
+   *                        CORRECT
+   *    VALUE:              906609
+   *    RUNTIME:            1116.188ms
    */
+
+  /**
+  *     UPDATED ON          2018/11/19
+  *     VALUE:              906609
+  *     RUNTIME:            52.239ms
+  */

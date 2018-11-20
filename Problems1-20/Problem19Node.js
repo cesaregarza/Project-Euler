@@ -76,5 +76,11 @@ console.log(`Answer: ${g} Execution Time: ${tot[0]}s, ${tot[1]/1000000}ms`);
  *      SUBMITTED ON        2018/11/16
  *      CORRECT
  *      VALUE:              171
- *      RUNTIME:            0.0991288ms
+ *      RUNTIME:            6.107ms
  */
+
+ /**
+  *     UPDATED ON          2018/11/19
+  *     VALUE:              171
+  *     RUNTIME:            0.099ms
+  */

@@ -24,13 +24,13 @@
     return nums[0] + nums[1] + nums[2];
  }
 
- let q = 1000;
+ let q = [1000];
 
 let times = [];
 let solutions = [];
 for (let i = 0; i < 5; i++){
     let hrStart = process.hrtime();
-    let g = solution(q);
+    let g = solution(...q);
     let hrEnd = process.hrtime(hrStart);
     times.push(hrEnd);
     solutions.push(g);
@@ -47,8 +47,14 @@ let g = solutions[0];
 console.log(`Answer: ${g} Execution Time: ${tot[0]}s, ${tot[1]/1000000}ms`);
 
  /**
-  *     SUBMITTED ON 2018/11/13
-  *     CORRECT
-  *     VALUE: 233168
-  *     RUNTIME: 0.061654ms
+  *     SUBMITTED ON        2018/11/13
+  *                         CORRECT
+  *     VALUE:              233168
+  *     RUNTIME:            6.934ms
+  */
+
+  /**
+  *     UPDATED ON          2018/11/19
+  *     VALUE:              233168
+  *     RUNTIME:            0.062ms
   */

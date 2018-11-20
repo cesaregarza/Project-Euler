@@ -49,8 +49,14 @@ console.log(`Answer: ${g} Execution Time: ${tot[0]}s, ${tot[1]/1000000}ms`);
 
 
 /**
- *      SUBMITTED ON 2018/11/14
- *      CORRECT
- *      VALUE: 25164150
- *      RUNTIME: 0.028368ms
+ *      SUBMITTED ON        2018/11/14
+ *                          CORRECT
+ *      VALUE:              25164150
+ *      RUNTIME:            6.639ms
  */
+
+  /**
+  *     UPDATED ON          2018/11/19
+  *     VALUE:              25164150
+  *     RUNTIME:            0.028ms
+  */

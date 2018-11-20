@@ -114,8 +114,14 @@ let g = solutions[0];
 console.log(`Answer: ${g} Execution Time: ${tot[0]}s, ${tot[1]/1000000}ms`);
 
 /**
- *      SUBMITTED ON    2018/11/16
- *      CORRECT
- *      VALUE:          21124
- *      RUNTIME:        1.5003546ms
+ *      SUBMITTED ON        2018/11/16
+ *                          CORRECT
+ *      VALUE:              21124
+ *      RUNTIME:            5.321ms
  */
+
+  /**
+  *     UPDATED ON          2018/11/19
+  *     VALUE:              21124
+  *     RUNTIME:            1.500ms
+  */

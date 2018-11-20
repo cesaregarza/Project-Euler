@@ -20,16 +20,16 @@ function solution(){
         for (let i = 1; i < q; i++){
             bigArr[i * p] = -1;
         }
-    }
+    };
 
     const findNext = () => {
         while(bigArr[p] !== undefined) {
-            p++
+            p++;
         }
         count++;
         bigArr[p] = 1;
         q = r / p;
-    }
+    };
 
     while (count < 10001){
         markNotPrime();
@@ -66,8 +66,14 @@ console.log(`Answer: ${g} Execution Time: ${tot[0]}s, ${tot[1]/1000000}ms`);
 
 
 /**
- *      SUBMITTED ON 2018/11/14
- *      CORRECT
- *      VALUE: 104743
- *      RUNTIME: 54.0520016ms
+ *      SUBMITTED ON        2018/11/14
+ *                          CORRECT
+ *      VALUE:              104743
+ *      RUNTIME:            64.883ms
  */
+
+  /**
+  *     UPDATED ON          2018/11/19
+  *     VALUE:              104743
+  *     RUNTIME:            54.052ms
+  */
