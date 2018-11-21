@@ -47,7 +47,7 @@ function solution(n){
         } else {
             if (hashMap[`${i}`].first == sumOfDivisors){
                 tot += i + sumOfDivisors;
-                arr.push([i, sumOfDivisors]);
+                // arr.push([i, sumOfDivisors]);
             }
         }
     }

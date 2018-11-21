@@ -105,6 +105,7 @@ const primeSeive = (n) => {
         while(bigArr[p] !== undefined) {
             p++;
         }
+        if (bigArr[p] == -1) return;
         count++;
         bigArr[p] = 1;
         q = r / p;
@@ -161,4 +162,78 @@ const mergeSort = {
         }
         return arr;
     }
+};
+
+/**
+ * Find period of repetition in the decimal equivalent of 1/n
+ * @param {number} denom Denominator
+ * @param {number} base Base in which we're calculating the period
+ * @returns {number} The number which indicates period length
+ */
+const findPeriod = (denom, base = 10) => {
+    let arr = [];
+    let b = 1;
+    let rem = -1;
+    let num = base;
+    while (1 > 0){
+        rem = num % denom;
+        if (rem == 0) return 0;
+      
+        if (arr.includes(rem)) break;
+        arr.push(rem);
+        num = rem * base;
+    }
+    return arr.length;
+};
+
+/**
+ * Modular Inverse. Uses Euclid's Extended GCD algorithm to find the modular inverse.
+ * @param {number} a a, the number we're finding the modular inverse of
+ * @param {number} m m, the modulus we're using
+ * @returns {number} returns the modular inverse to a, such that a * x = 1 (mod m)
+ */
+const modularInverse = (a, m) => {
+    let mm = m;
+    let x = 1;
+    let y = 0;
+
+    if (m == 1) return 0;
+
+    while (a > 1){
+        q = Math.floor(a / m);
+        [a, m] = [m, a % m];
+        [x, y] = [y, x - q * y];
+    }
+
+    x += x < 0 ? mm : 0;
+    return x;
+};
+
+/**
+ * 
+ * @param {number} a a, number to find the smallest power of 2 larger than a
+ * @param {number} b base. If blank, will default to two.
+ * @returns {number} Power of 2
+ */
+const nextPowerOfb = (a, b = 2) => {
+    let g = Math.ceil(Math.log(a)/Math.log(b));
+    return 2 ** g;
+};
+
+const nextPowerOfb2 = (a, b=2) => {
+    return Math.ceil(Math.log(a)/Math.log(b));
+};
+
+/**
+ * Finds the coprimes of two numbers, a and b, given their divisors.
+ * @param {number[]} a Sorted divisors of first number
+ * @param {number[]} b Sorted divisors of second number
+ * @returns {Set <number>} Returns a set of coprimes
+ */
+const coprimeSorted = (a, b) => {
+    let difference = a
+                 .filter(x => !b.includes(x))
+                 .concat(b.filter(x => !a.includes(x)));
+  
+  return new Set(difference);
 };
