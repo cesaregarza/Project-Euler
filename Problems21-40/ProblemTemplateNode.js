@@ -6,6 +6,7 @@
  */
 //var BigNumber = require('bignumber.js');
 //var Decimal = require('decimal.js');
+//var fs = require('fs');
 
 function solution(){
 

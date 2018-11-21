@@ -23,12 +23,11 @@ function solution(){
         return arr.length;
     };
     let divs = 1;
-    let i = 1;
+    let i = 2;
 
     while (divs < 500){
-        i++;
         let u = (i + i%2)/2;
-        let v = (i + ((i + 1)%2));
+        let v = (i + ((++i)%2));
         var n = u * v;
         divs = divisors(n);
     }
@@ -71,3 +70,9 @@ console.log(`Answer: ${g} Execution Time: ${tot[0]}s, ${tot[1]/1000000}ms`);
   *     VALUE:              76576500
   *     RUNTIME:            317.712ms
   */
+
+  /**
+   *    UPDATED ON          2018/11/20
+   *    VALUE:              76576500
+   *    RUNTIME:            255.205ms
+   */

@@ -11,7 +11,7 @@ function solution(n, b){
 
     let max_palindrome = 0;
     let upper = (b ** n) - 1;
-    let lower = (b ** (n - 1)) - 1;
+    let lower = (b ** n) / 2;
 
     for(let x = upper; x >= lower; x--){
       for(let y = x; y>= lower; y--){
@@ -62,4 +62,10 @@ function solution(n, b){
   *     UPDATED ON          2018/11/19
   *     VALUE:              906609
   *     RUNTIME:            52.239ms
+  */
+ 
+ /**
+  *     UPDATED ON          2018/11/20
+  *     VALUE:              906609
+  *     RUNTIME:            22.858ms
   */

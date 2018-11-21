@@ -10,12 +10,52 @@
 //var BigNumber = require('bignumber.js');
 //var Decimal = require('decimal.js');
 
-function solution(){
-    
+function solution(n){
 
+    const properDivisors = (n) => {
+        let arr = [1];
+        let q = Math.floor(Math.sqrt(n));
+        for (let i = 2; i < q; i++){
+            if (n%i == 0){
+                arr.push(i);
+                arr.push(n/i);
+            }
+        }
+
+        let tot = 0;
+        for (let i in arr){
+            tot += arr[i];
+        }
+        return tot;
+    };
+
+    let hashMap = {};
+    let tot = 0;
+    let arr = [];
+
+    for (let i = 1; i < n; i++){
+        let sumOfDivisors = properDivisors(i);
+        
+        if (hashMap[`${i}`] == undefined){
+            if (hashMap[`${sumOfDivisors}`] == undefined){
+                hashMap[`${sumOfDivisors}`] = {
+                    'first': i,
+                    'touched': false,
+                    'value': sumOfDivisors
+                };
+            }
+        } else {
+            if (hashMap[`${i}`].first == sumOfDivisors){
+                tot += i + sumOfDivisors;
+                arr.push([i, sumOfDivisors]);
+            }
+        }
+    }
+    // console.log(arr);
+    return tot;
 }
 //INPUT GOES HERE
-let q = [0];
+let q = [10000];
 
 //TIME STUFF
 let times = [];
@@ -39,8 +79,8 @@ let g = solutions[0];
 console.log(`Answer: ${g} Execution Time: ${tot[0]}s, ${tot[1]/1000000}ms`);
 
 /**
- *      SUBMITTED ON
- *      CORRECT / INCORRECT
- *      VALUE:
- *      RUNTIME:
+ *      SUBMITTED ON        2018/11/20
+ *                          CORRECT
+ *      VALUE:              31626
+ *      RUNTIME:            4.715ms
  */
