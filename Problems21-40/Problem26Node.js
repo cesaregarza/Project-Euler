@@ -24,7 +24,6 @@ function solution(){
     const primeSeive = (n) => {
     
         let bigArr = [];
-        let count = 1;
         let primeArr = [];
         [bigArr[0], bigArr[1], bigArr[2]] = [0, 0, 1];
         let p = 2;
@@ -59,7 +58,6 @@ function solution(){
 
     const findPeriod = (denom, base = 10) => {
         let arr = [];
-        let b = 1;
         let rem = -1;
         let num = base;
         while (1 > 0){

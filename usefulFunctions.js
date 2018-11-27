@@ -237,3 +237,16 @@ const coprimeSorted = (a, b) => {
   
   return new Set(difference);
 };
+
+/**
+ * Finds if a number is prime, returns true if it's prime false if not. O(sqrt(N))
+ * @param {number} n number you want to evaluate if it's prime
+ * @returns {boolean}
+ */
+const isPrime = (n) => {
+  let m = Math.floor(Math.sqrt(n));
+  for (let i = 2; i <= m; i++) {
+    if (n % i == 0) return false;
+  }
+  return true;
+};
