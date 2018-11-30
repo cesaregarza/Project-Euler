@@ -8,10 +8,8 @@
 
 function solution(){
     
-    let bigArr = [];
-    let count = 0;
-    [bigArr[0], bigArr[1], bigArr[2]] = [0, 0, 1];
-    count++;
+    let bigArr = [0, 0, 1];
+    let count = 1;
     let p = 2;
     let r = 10 ** 6;
     let q = r / p;
