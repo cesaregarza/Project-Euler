@@ -8,25 +8,11 @@
  */
 // import {BigNumber} from 'bignumber.js'
 
-function solution(n){
+function solution(){
     
-    let sol = 1;
-    let u = 1;
-    let a, b, c;
-
-    loop1:
-    while (sol < 5000){
-        u++;
-        for (let v = 1; v < u; v++){
-            let u2 = u ** 2;
-            let v2 = v ** 2;
-            [a, b, c] = [u2 - v2, 2 * u * v, u2 + v2];
-            sol = a + b + c;
-            if (sol === n) break loop1;
-        }
-    }
-    return a * b * c;
-
+    let x = 20;
+    let y = 500 / x - x;
+    return (2 * x * y * (x ** 4 - y ** 4));
 }
 
 //INPUT GOES HERE
@@ -67,3 +53,9 @@ console.log(times);
   *     VALUE:              31875000
   *     RUNTIME:            0.177ms
   */
+
+  /**
+   *    UPDATED ON          2019/8/23
+   *    VALUE:              3187500
+   *    RUNTIME:            0.03088ms
+   */

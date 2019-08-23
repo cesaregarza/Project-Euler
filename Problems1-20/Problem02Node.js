@@ -24,7 +24,7 @@
     return sum;
  }
 
- let q = 4000000;
+ let q = 40000000000000000000000000000000000000000000000000000000000000000000;
 
 let times = [];
 let solutions = [];
@@ -45,6 +45,7 @@ tot[1] /= 5;
 let g = solutions[0];
 
 console.log(`Answer: ${g} Execution Time: ${tot[0]}s, ${tot[1]/1000000}ms`);
+console.log(times)
 
  /**
   *     SUBMITTED ON        2018/11/13
